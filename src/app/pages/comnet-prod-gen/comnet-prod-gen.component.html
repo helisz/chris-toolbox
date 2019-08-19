@@ -1,0 +1,114 @@
+<h1 class="text-lg m-b">ComNet Generator</h1>
+<button nz-button nzType="danger" (click)="reset()">
+  <i nz-icon type="reload"></i>
+  <span>Reset</span>
+</button>
+
+<nz-divider></nz-divider>
+<div nz-row [nzGutter]="16" style="max-width: 1000px;">
+  <div nz-col nzSpan="6">
+    <h3>Global</h3>
+    <div class="row">
+      <div>
+        <div class="">
+          <label>[Table]</label>
+          <div>
+            <input nz-input [(ngModel)]="data.table">
+          </div>
+        </div>
+        <div class="">
+          <label>Id</label>
+          <div>
+            <input nz-input [(ngModel)]="data.id">
+          </div>
+        </div>
+        <div class="">
+          <label>Image Path</label>
+          <div>
+            prod_
+            <input nz-input [(ngModel)]="data.id" readonly style="display:inline;width: 100px;" placeholder=""> .png
+          </div>
+        </div>
+        <div class="">
+          <label>Terms Info</label>
+          <div>
+            <input nz-input [(ngModel)]="data.terms">
+          </div>
+        </div>
+        <div class="">
+          <label>Promotion Info</label>
+          <div>
+            <input nz-input [(ngModel)]="data.promo">
+          </div>
+        </div>
+        <div class="">
+          <label>Price</label>
+          <div>
+            <input nz-input [(ngModel)]="data.price">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div nz-col nzSpan="6">
+    <h3>繁体中文</h3>
+    <div>
+      <label>Chinese Name</label>
+      <input nz-input [(ngModel)]="data.cname">
+    </div>
+    <div>
+      <label>Desc Line 1</label>
+      <textarea rows="3" nz-input [(ngModel)]="data.cdesc1"></textarea>
+    </div>
+    <div>
+      <label>Desc Area 2</label>
+      <div><small>產品詳情</small></div>
+      <textarea rows="10" nz-input [(ngModel)]="data.cdesc2"></textarea>
+    </div>
+    <div>
+      <label>Desc Remark 3</label>
+      <textarea rows="4" nz-input [(ngModel)]="data.cdesc3"></textarea>
+    </div>
+  </div>
+
+
+  <div nz-col nzSpan="6">
+    <h3>English</h3>
+    <div>
+      <label>English Name</label>
+      <input nz-input [(ngModel)]="data.ename">
+    </div>
+    <div>
+      <label>Desc Line 1</label>
+      <textarea rows="3" nz-input [(ngModel)]="data.edesc1"></textarea>
+    </div>
+    <div>
+      <label>Desc Area 2</label>
+      <div><small>SIM Card Details</small></div>
+      <textarea rows="10" nz-input [(ngModel)]="data.edesc2"></textarea>
+    </div>
+    <div>
+      <label>Desc Remark 3</label>
+      <textarea rows="4" nz-input [(ngModel)]="data.edesc3"></textarea>
+    </div>
+  </div>
+
+  <div nz-col nzSpan="6">
+    <h3>Generated Result</h3>
+
+    <button nz-button nzType="primary" (click)="gen()">
+      <i nz-icon type="caret-right"></i>
+      <span>Generate</span>
+    </button>&nbsp;
+    <button nz-button nzType="default" (click)="copyText(str)" value="click to copy">
+      <i nz-icon type="copy"></i>
+      <span>Copy</span>
+    </button>
+
+    <div class="p-m bg-light code code-area" style="margin-top:10px;">
+      {{str}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+
+.fh{
+  min-height: 100vh;
+}
+
+.code{
+  font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+  font-size: 10px;
+}
+.code-area{
+  background-color: #eff0f1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  overflow-x: scroll;
+}

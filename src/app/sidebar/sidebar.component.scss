@@ -1,0 +1,19 @@
+.side-heading{
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: left;
+  margin: 60px 20px 10px 20px;
+  padding: 0 0 5px 0;
+  color: #FFF;
+  // background-color: #FFF;
+  // padding: 0px 5px;
+  // border-left: 5px solid black;
+  // box-shadow: -4px 0px 0px white;
+  border-bottom: 3px solid rgba(255,255,255,0.4);
+  display: inline-block;
+  &:hover{
+    color: #1890ff;
+  }
+}

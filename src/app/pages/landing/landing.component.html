@@ -1,0 +1,26 @@
+<h1>Home</h1>
+<nz-divider></nz-divider>
+<h3>Features</h3>
+<div class="landing-list product">
+  <span *ngFor="let nav of navigation">
+    <a [routerLink]="[nav.link]" *ngIf="nav.type=='feature'">
+      <i nz-icon type="{{nav.icon}}"></i>
+      <div class="content">
+        {{nav.name}}
+      </div>
+    </a>
+  </span>
+</div>
+
+<nz-divider></nz-divider>
+<h3>Demos</h3>
+<div class="landing-list demo">
+  <span *ngFor="let nav of navigation">
+    <a [routerLink]="[nav.link]" *ngIf="nav.type=='demo'">
+      <i nz-icon type="{{nav.icon}}"></i>
+      <div class="content">
+        {{nav.name}}
+      </div>
+    </a>
+  </span>
+</div>

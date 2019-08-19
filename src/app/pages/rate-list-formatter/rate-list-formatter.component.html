@@ -1,0 +1,27 @@
+<h1>Rate List Formatter</h1>
+
+<div>
+    <button nz-button nzType="primary" (click)="parse()">Parse</button>&nbsp;
+    <button nz-button nzType="default" (click)="clean()">Clean</button>&nbsp;
+    <button nz-button nzType="default" (click)="cleanFormat()">CleanFormat</button>
+</div>
+
+<nz-divider></nz-divider>
+<div nz-row [nzGutter]="16" style="max-width: 1000px;">
+    <div nz-col nzSpan="6">
+        <h3 class="subtitle">English</h3>
+        <textarea rows="4" nz-input [(ngModel)]="en"></textarea>
+    </div>
+    <div nz-col nzSpan="6">
+        <h3 class="subtitle">中文</h3>
+        <textarea rows="4" nz-input [(ngModel)]="tc"></textarea>
+    </div>
+    <div nz-col nzSpan="6">
+        <h3 class="subtitle">Price</h3>
+        <textarea rows="4" nz-input [(ngModel)]="rate"></textarea>
+    </div>
+    <div nz-col nzSpan="6">
+        <h3 class="subtitle">Compressed</h3>
+        <textarea rows="4" nz-input [(ngModel)]="cleanRes"></textarea>
+    </div>
+  </div>

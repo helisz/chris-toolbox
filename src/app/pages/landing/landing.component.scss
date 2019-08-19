@@ -1,0 +1,70 @@
+$primary: #1890ff !default;
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+.landing-list {
+    a {
+        display: inline-block;
+        background-color: $primary;
+        border: 1px solid $primary;
+        border-radius: 6px;
+        width: 160px;
+        margin: 10px 10px 0 0;
+        padding: 16px 10px;
+        vertical-align: middle;
+        @include transition(all 0.15s ease-in-out);
+        i {
+            display: block;
+            text-align: left;
+            color: white;
+            font-weight: 300;
+            @include transition(all 0.15s ease-in-out);
+        }
+        .content {
+            text-align: left;
+            color: white;
+            font-weight: 300;
+            @include transition(all 0.15s ease-in-out);
+        }
+        &:hover {
+            background-color: white;
+            i {
+                color: $primary;
+            }
+            .content {
+                color: $primary;
+            }
+        }
+    }
+    &.product {
+        a {
+            height: 220px;
+            i {
+                line-height: 60px;
+                height: 50px;
+                font-size: 1.6rem;
+            }
+            .content {
+                font-size: 1rem;
+            }
+        }
+    }
+    &.demo {
+      a {
+        height: 100px;
+        i {
+            line-height: 40px;
+            height: 34px;
+            font-size: 1.3rem;
+        }
+        .content {
+            font-size: 1rem;
+        }
+    }
+    }
+}

@@ -1,0 +1,32 @@
+<h1>Demo 1</h1>
+
+
+<nz-table #smallTable nzSize="small" [nzData]="data" [nzShowPagination]="false">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of smallTable.data, let ind = index">
+      <td><b>{{data.name}}</b></td>
+      <td>{{data.age}}</td>
+      <td>
+        <a (click)="delete(ind)">
+            <i nz-icon type="delete" theme="twotone"></i> delete
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+
+<br>
+
+<button nz-button nzType="primary" (click)="open()">Add User</button>
+
+
+<nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" nzTitle="Add User" (nzOnClose)="close()">
+  <app-demo1-add (ready)="add($event)"></app-demo1-add>
+</nz-drawer>
