@@ -1,0 +1,17 @@
+<h3>Fire Emblem DB</h3>
+<!-- {{ profileList | json }} -->
+
+<div class="portrait-list">
+	<div class="portrait" *ngFor="let item of profileList">
+		<a (click)="setDetail(item.id)">
+			<div class="head">
+				<img src="assets/img/fireemblem/{{ item.img }}" alt="" />
+			</div>
+			<div class="body">
+				<!-- <small class="id">{{ item.id }}</small> -->
+				<div class="name">{{ item.name }}</div>
+			</div>
+		</a>
+	</div>
+</div>
+{{ detail | json }}

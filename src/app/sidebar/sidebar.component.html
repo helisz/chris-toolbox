@@ -1,14 +1,15 @@
-<a routerLink='/'><div class="side-heading">CITIC<br>TOOLBOX</div></a>
+<a routerLink="/"><div class="side-heading">TOOLBOX</div></a>
 <ul nz-menu [nzMode]="'inline'" [nzTheme]="'dark'">
-  <li nz-menu-item
-      *ngFor="let nav of navigation" routerLinkActive="ant-menu-item-selected"
-      [routerLinkActiveOptions]="{ exact: true }">
-    <a [routerLink]="[nav.link]">
-      <i nz-icon type="{{nav.icon}}" theme="outline"></i>{{nav.name}}
-    </a>
-  </li>
+	<li
+		nz-menu-item
+		*ngFor="let nav of navigation"
+		routerLinkActive="ant-menu-item-selected"
+		[routerLinkActiveOptions]="{ exact: true }"
+	>
+		<a [routerLink]="[nav.link]"> <i nz-icon type="{{ nav.icon }}" theme="outline"></i>{{ nav.name }} </a>
+	</li>
 </ul>
 
 <ul>
-  <li *ngFor="let a of testdata">{{a}}</li>
+	<li *ngFor="let a of testdata">{{ a }}</li>
 </ul>

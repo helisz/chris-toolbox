@@ -1,44 +1,32 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root'
 })
 export class NavigationService {
+	constructor() {}
 
-  constructor() { }
+	getNavigation() {
+		return [
+			{
+				name: 'Landing',
+				link: '/',
+				icon: 'align-left',
+				type: 'main'
+			},
+			{
+				name: 'Demo I',
+				link: 'demo1',
+				icon: 'book',
+				type: 'demo'
+			},
 
-  getNavigation(){
-    return [
-      {
-        name: 'Landing',
-        link: '/',
-        icon: 'align-left',
-        type: 'main'
-      },
-      {
-        name: 'Rate List Formatter',
-        link: 'rate',
-        icon: 'setting',
-        type: 'feature'
-      },
-      {
-        name: 'Comnet PrdGen',
-        link: 'comnet-prd',
-        icon: 'setting',
-        type: 'feature'
-      },
-      {
-        name: '繁简转换',
-        link: 'cnconverter',
-        icon: 'setting',
-        type: 'feature'
-      },
-      {
-        name: 'Demo I',
-        link: 'demo1',
-        icon: 'book',
-        type: 'demo'
-      }
-    ];
-  }
+			{
+				name: 'Fire Emblem',
+				link: 'fire-emblem',
+				icon: 'book',
+				type: 'feature'
+			}
+		];
+	}
 }

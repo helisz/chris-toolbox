@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CnconverterComponent } from './cnconverter.component';
+import { FireEmblemComponent } from './fire-emblem.component';
 
-describe('CnconverterComponent', () => {
-  let component: CnconverterComponent;
-  let fixture: ComponentFixture<CnconverterComponent>;
+describe('FireEmblemComponent', () => {
+  let component: FireEmblemComponent;
+  let fixture: ComponentFixture<FireEmblemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CnconverterComponent ]
+      declarations: [ FireEmblemComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CnconverterComponent);
+    fixture = TestBed.createComponent(FireEmblemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
