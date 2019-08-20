@@ -16,7 +16,7 @@
 </div>
 <!-- {{ detail | json }} -->
 <div class="details" *ngIf="showDetail">
-	<a nz-link nzType="primary" (click)="back()"><i nz-icon type="left"></i>Back to list</a>
+	<a nz-link nzType="primary" (click)="back()"><i nz-icon type="left"></i> &nbsp;回到主页</a>
 	<div class="avatar">
 		<img src="assets/img/fireemblem/{{ detail.img }}" alt="" />
 
@@ -36,5 +36,5 @@
 	<ul class="list">
 		<li *ngFor="let item of detail.end">{{ item }}</li>
 	</ul>
-	<a nz-link nzType="primary" (click)="back()"><i nz-icon type="left"></i>Back to list</a>
+	<a nz-link nzType="primary" (click)="back()"><i nz-icon type="left"></i>回到主页</a>
 </div>
