@@ -1,0 +1,20 @@
+<div class="app-topbar">
+	<ul nz-menu nzTheme="dark" nzMode="horizontal">
+		<li class="nav-menu" nz-submenu>
+			<span title><i nz-icon type="menu"></i></span>
+			<ul>
+				<li
+					nz-menu-item
+					*ngFor="let nav of navigation"
+					routerLinkActive="ant-menu-item-selected"
+					[routerLinkActiveOptions]="{ exact: true }"
+				>
+					<a [routerLink]="[nav.link]">
+						<i nz-icon type="{{ nav.icon }}" theme="outline"></i>{{ nav.name }}
+					</a>
+				</li>
+			</ul>
+		</li>
+		<div class="logo">TOOLBOX</div>
+	</ul>
+</div>

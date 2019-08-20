@@ -1,7 +1,7 @@
-<h3>Fire Emblem DB</h3>
+<h1>Fire Emblem DB</h1>
 <!-- {{ profileList | json }} -->
 
-<div class="portrait-list">
+<div class="portrait-list" *ngIf="!showDetail">
 	<div class="portrait" *ngFor="let item of profileList">
 		<a (click)="setDetail(item.id)">
 			<div class="head">
@@ -14,4 +14,27 @@
 		</a>
 	</div>
 </div>
-{{ detail | json }}
+<!-- {{ detail | json }} -->
+<div class="details" *ngIf="showDetail">
+	<a nz-link nzType="primary" (click)="back()"><i nz-icon type="left"></i>Back to list</a>
+	<div class="avatar">
+		<img src="assets/img/fireemblem/{{ detail.img }}" alt="" />
+
+		<h2 class="margin-left: 10px;">
+			<span class="id">[{{ detail.id }}]</span>&nbsp;{{ detail.name }}
+		</h2>
+	</div>
+	<h3>喜欢的茶</h3>
+	<ul class="list">
+		<li *ngFor="let item of detail.favtea">{{ item }}</li>
+	</ul>
+	<h3>茶话会话题</h3>
+	<ul class="list">
+		<li *ngFor="let item of detail.talk">{{ item }}</li>
+	</ul>
+	<h3>茶话会结束会心一击</h3>
+	<ul class="list">
+		<li *ngFor="let item of detail.end">{{ item }}</li>
+	</ul>
+	<a nz-link nzType="primary" (click)="back()"><i nz-icon type="left"></i>Back to list</a>
+</div>

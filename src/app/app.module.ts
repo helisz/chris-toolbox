@@ -15,6 +15,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { Demo1MainComponent } from './pages/demo1/demo1-main/demo1-main.component';
 import { Demo1AddComponent } from './pages/demo1/demo1-add/demo1-add.component';
 import { FireEmblemComponent } from './pages/fire-emblem/fire-emblem.component';
+import { TopbarComponent } from './topbar/topbar.component';
 
 registerLocaleData(en);
 
@@ -27,7 +28,8 @@ registerLocaleData(en);
 
 		Demo1MainComponent,
 		Demo1AddComponent,
-		FireEmblemComponent
+		FireEmblemComponent,
+		TopbarComponent
 	],
 	imports: [
 		BrowserModule,

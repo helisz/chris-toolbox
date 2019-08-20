@@ -1,0 +1,14 @@
+.app-topbar {
+  overflow: hidden;
+
+  .logo {
+    float: right;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .nav-menu {
+    float: left;
+  }
+}

@@ -5,13 +5,15 @@
     display: block;
     float: left;
     border: 1px solid #F2F3F5;
-    width: 80px;
-    height: 102px;
-    margin: 0 10px 10px 0;
+    border-radius: 4px;
+    width: 70px;
+    height: 92px;
+    margin: 0 5px 5px 0;
 
     .head {
       img {
         width: 100%;
+        border-radius: 4px 4px 0 0;
       }
     }
 
@@ -24,9 +26,39 @@
       }
 
       .name {
-        font-size: 12px;
+        font-size: 10px;
         text-align: center;
         color: #666;
+      }
+    }
+  }
+}
+
+.details {
+  a {
+    margin: 20px 0;
+    display: block;
+  }
+
+  .avatar {
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    img {
+      display: inline-block;
+      width: 50px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      margin: 0 0 0 15px;
+      display: inline-block;
+      line-height: 23px;
+      vertical-align: bottom;
+
+      .id {
+        color: #A2A3A5;
+        font-size: 0.45em;
       }
     }
   }

@@ -16,6 +16,7 @@ export class FireEmblemComponent implements OnInit {
 	data: any;
 	profileList: Array<Character> = [];
 	detail: object;
+	showDetail = false;
 
 	constructor(private fire: FireEmblemService) {
 		this.data = fire.getData();
@@ -38,5 +39,12 @@ export class FireEmblemComponent implements OnInit {
 				this.detail = profile;
 			}
 		}
+
+		this.showDetail = true;
+	}
+
+	back() {
+		this.showDetail = false;
+		this.detail = {};
 	}
 }

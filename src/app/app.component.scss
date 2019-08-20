@@ -1,5 +1,5 @@
-
-nz-header,nz-footer {
+nz-header,
+nz-footer {
   background: #7dbcea;
   color: #fff;
 }
@@ -30,3 +30,20 @@ nz-layout:last-child {
   margin: 0;
 }
 
+app-topbar {
+  display: none;
+}
+
+nz-sider {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  app-topbar {
+    display: block;
+  }
+
+  nz-sider {
+    display: none;
+  }
+}
